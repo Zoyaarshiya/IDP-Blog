@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="blog-header">
+            <img [src]="blog.urlToImage" class="img" *ngIf="blog.urlToImage !=null else img">
+            <ng-template #img>
+                <img class="img" src="https://img.etimg.com/thumb/msid-87860183,width-1070,height-580,imgsize-42372,overlay-etmarkets/photo.jpg">
+            </ng-template>
+        </div>
+        <div class="blog-body">
+            <h3>{{blog.title}}</h3>
+            <p>{{blog.description}}</p>
+        </div>
+        <div class="btn">
+            <button (click)="removeBlog()"class="del">Delete</button>
+            <button (click)="editBlog(blog)" class="edit">Edit</button>
+        </div>
+     </div>
+</div>

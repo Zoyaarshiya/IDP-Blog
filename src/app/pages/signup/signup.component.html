@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+    <form [formGroup]="signUpForm" (ngSubmit)="submit(signUpForm)">
+        <label>First Name:</label><br>
+        <input type="text"  formControlName="fname"><br>
+        <span *ngIf="fname.invalid && fname.touched">Enter first name</span> 
+        <br>
+        <label>Last Name:</label><br>
+        <input type="text" formControlName="lname"><br>
+        <span *ngIf="lname.invalid && lname.touched">Enter last name</span>
+        <br>
+        <label>Email:</label><br>
+        <input type="text"  formControlName="email"><br>
+        <span *ngIf="email.invalid && email.touched">Enter valid mail</span> 
+        <br>
+        <label>Mobile Number:</label><br>
+        <input type="text"formControlName="mobno"><br>
+        <span *ngIf="mobno.invalid && mobno.touched">Enter only numbers</span> 
+        <br>
+        <label>DOB:</label><br>
+        <input  style="width:100%;height:50px;border: 1px solid #ccc;
+        border-radius: 4px;" type="date"formControlName="dob"><br>
+        <span *ngIf="dob.invalid && dob.touched">Field should not be empty</span>
+        <br>
+        <label>Address:</label><br>
+        <input type="text"formControlName="address"><br>
+        <span *ngIf="address.invalid && address.touched">Enter address</span>
+        <br>
+        <label>Country:</label><br>
+        <select formControlName="country">
+            <option value="India">India</option>
+            <option value="America">America</option>
+            <option value="London">London</option>
+        </select><br>
+        <span *ngIf="country.invalid && country.touched">Field should not be empty</span>
+        <br>
+        <label>About you:</label><br>
+        <textarea type="text" formControlName="aboutyou"></textarea><br>
+        <span *ngIf="aboutyou.invalid && aboutyou.touched">Enter about yourself</span>
+        <br>
+        <input type="submit">
+    </form>
+</div>
+</div>
+

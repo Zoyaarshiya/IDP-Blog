@@ -1,0 +1,22 @@
+<div class="container">
+<div class="row" *ngFor="let blog of blogArr, let i = index">
+    <div class="blog-header">
+        <img [src]="blog.urlToImage" class="img" *ngIf="blog.urlToImage !=null else img">
+
+        <ng-template #img>
+            <img class="img" src="https://img.etimg.com/thumb/msid-87860183,width-1070,height-580,imgsize-42372,overlay-etmarkets/photo.jpg">
+        </ng-template>
+    </div>
+    <div class="blog-body">
+        <h1>{{blog.title}}</h1>
+        <p>{{blog.description}}</p>
+        <div class="readmore">
+            <a [routerLink]="['blog/',i]">Read More</a>
+        </div>
+        
+    </div>
+</div>
+<div class="viewmore">
+    <button routerLink="/allblog" class="view">View More</button>
+</div>
+</div>

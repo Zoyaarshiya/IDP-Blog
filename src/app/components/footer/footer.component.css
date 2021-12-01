@@ -1,0 +1,33 @@
+.main_footer
+{
+    
+    width:1100px;
+    margin:0 auto;
+}
+.fluid_container
+{
+    background-color: black;
+}
+.clr
+{
+    clear: both;
+}
+.col-md-3
+{
+    float:left;
+    padding:20px;
+    width: 25%;
+    color:white;
+}
+.col-md-3 ul li
+{
+   display: block;
+}
+.col-md-3 .topic
+{
+    color:white;
+}
+.col-md-3 .menu
+{
+    color:gray;
+}

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="form">
+    <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm)">
+        <label>URL:</label>
+        <input type="text" placeholder="Enter URL" formControlName="url"><br>
+        <span *ngIf="url.invalid && url.touched">Field should not be empty</span>
+        <br>
+        <label>Title:</label>
+        <textarea type="text" placeholder="Enter Title" formControlName="title"></textarea><br>
+        <span *ngIf="title.invalid && title.touched">Field should not be empty</span>
+        <br>
+        <label>Author:</label>
+        <input type="text" placeholder="Enter AuthorName" formControlName="author"><br>
+        <span *ngIf="author.invalid && author.touched">Field should not be empty</span>
+        <br>
+        <label>Description:</label>
+        <textarea type="text" placeholder="Enter Description" formControlName="description"></textarea><br>
+        <span *ngIf="desc.invalid && desc.touched">Field should not be empty</span>
+        <br>
+        <label>Published At:</label>
+        <input type="text" placeholder="Enter Published date" formControlName="publishedAt"><br>
+        <span *ngIf="publish.invalid && publish.touched">Field should not be empty</span>
+        <br>
+        <button class="btn">Submit</button>
+    </form>
+</div>
+</div>
